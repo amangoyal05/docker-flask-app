@@ -13,7 +13,8 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt installs Pyth
 
 EXPOSE 5000 informs Docker that the container will listen on port 5000 at runtime.
 
-ENV NAME World sets an environment variable named 'NAME' with the value 'World'. This variable can be accessed by applications running inside the container.<br>
+ENV NAME World sets an environment variable named 'NAME' with the value 'World'. This variable can be accessed by applications running inside the container.
+
 CMD ["python", "app.py"] specifies the default command to run when the container starts. Here, it launches the Python script "app.py".
 ```
 Once the Dockerfile is made, we need to build the image for the app using the following command - <br>
