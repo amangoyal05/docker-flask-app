@@ -32,3 +32,19 @@ To expose the local server to the internet for testing, open a new terminal wind
 ngrok http 4000
 ```
 This will provide you with a random domain link which you can use to view your application.
+
+Now, create a repository on docker hub. Let's call it test.
+Open the CLI and perform the following commands -
+
+```sh
+docker tag tag-name your-docker-username/test:latest
+```
+The above command tags the existing Docker image named 'app' with a new name 'your-docker-username/test' and tag it as 'latest'. This is a necessary step before pushing the image to a Docker registry like Docker Hub. It helps in organizing and identifying the Docker images with meaningful names and tags.
+
+Then we push the image to the repository using - 
+
+```sh
+docker push your-docker-username/test:latest
+```
+
+This is how we can push an image to Docker Hub.
